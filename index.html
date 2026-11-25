@@ -1,19 +1,61 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahmoud Salah</title>
-  
-  <!-- تحويل فوري ومباشر لملف الـ PDF -->
-  <meta http-equiv="refresh" content="0; url=Mahmoud_Salah_Resume.pdf">
-  <script>
-    window.location.replace("Mahmoud_Salah_Resume.pdf");
-  </script>
-</head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahmoud Salah | React Front-End Developer</title>
+<meta name="description" content="Resume of Mahmoud Salah, React Front-End Developer from Cairo, Egypt: skills, projects, education.">
+<style>
+:root{--bg:#070b16;--card:#101831;--fg:#e6ecff;--mut:#9fb0d6;--ac:#7c9cff;--ac2:#35e0c2;--bd:#22305a}
+[data-theme=light]{--bg:#f6f8ff;--card:#fff;--fg:#0f1a3a;--mut:#46557f;--ac:#2c4fd8;--ac2:#087f6c;--bd:#c9d3f0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,"Segoe UI",Roboto,sans-serif}
+header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:12px 5vw;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd)}
+header b{letter-spacing:.04em}nav{display:flex;gap:14px;align-items:center}@media(max-width:560px){nav a{display:none}}nav a{color:var(--mut);text-decoration:none}nav a:hover{color:var(--fg)}
+button,.btn{font:inherit;cursor:pointer;border:1px solid var(--bd);background:var(--card);color:var(--fg);padding:8px 14px;border-radius:10px;text-decoration:none;display:inline-block}
+.btn.p{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#06101f;border:0;font-weight:700}
+:focus-visible{outline:3px solid var(--ac2);outline-offset:2px}
+.hero{padding:12vh 5vw 8vh;max-width:1100px;margin:auto;position:relative}
+.hero h1{font-size:clamp(2.2rem,7vw,4.6rem);line-height:1.05;margin:.2em 0}
+.hero h1 span{background:linear-gradient(120deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:60ch;color:var(--mut);font-size:1.1rem}.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+section{max-width:1100px;margin:auto;padding:46px 5vw}h2{font-size:1.6rem;margin:0 0 18px}h2:before{content:"";display:inline-block;width:26px;height:4px;border-radius:3px;background:linear-gradient(90deg,var(--ac),var(--ac2));margin-right:10px;vertical-align:middle}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px;transition:transform .25s,border-color .25s}.card:hover{transform:translateY(-4px) rotateX(2deg);border-color:var(--ac)}
+.card h3{margin:.1em 0}.tag{display:inline-block;margin:3px 4px 0 0;padding:2px 10px;border-radius:99px;border:1px solid var(--bd);color:var(--mut);font-size:.85rem}
+ul{padding-left:1.1em;color:var(--mut)}
+.rev{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.rev.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rev{opacity:1;transform:none}}
+canvas.bg{position:fixed;inset:0;z-index:0;pointer-events:none}main,header{position:relative;z-index:2}
+</style></head>
 <body>
-  <p style="font-family: sans-serif; text-align: center; margin-top: 20px;">
-    جاري تحويلك للسيرة الذاتية... إذا لم يتم التحويل تلقائياً، <a href="Mahmoud_Salah_Resume.pdf">اضغط هنا لفتح الـ PDF</a>.
-  </p>
-</body>
-</html>
+<header><b>MS</b><nav><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#edu">Education</a><button id="th" aria-label="Toggle light and dark theme">Light / Dark</button></nav></header>
+<main>
+<div class="hero rev"><div class="tag">Cairo, Egypt</div><h1>Mahmoud Salah<br><span>React Front-End Developer</span></h1>
+<p>Computer Science graduate (Software Engineering, Mansoura University) who blends front-end craft with full-stack fluency in React, TypeScript, Node.js, PostgreSQL and Prisma.</p>
+<div class="row"><a class="btn p" href="Mahmoud_Salah_Resume.pdf" download>Download PDF resume</a><a class="btn" href="https://md.mahmodsalah.workers.dev/">Portfolio</a><a class="btn" href="https://github.com/engMahmoudSalah">GitHub</a><a class="btn" href="https://www.linkedin.com/in/mahmod-salah">LinkedIn</a></div></div>
+<section id="skills" class="rev"><h2>Skills</h2><div class="grid">
+<div class="card"><h3>Frontend</h3><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript ES6+</span><span class="tag">TypeScript</span><span class="tag">React</span></div>
+<div class="card"><h3>Styling</h3><span class="tag">Tailwind CSS</span><span class="tag">Bootstrap</span><span class="tag">Framer Motion</span><span class="tag">Responsive design</span></div>
+<div class="card"><h3>State and forms</h3><span class="tag">Redux</span><span class="tag">Zustand</span><span class="tag">React Query</span><span class="tag">React Hook Form</span></div>
+<div class="card"><h3>Backend and data</h3><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">REST</span><span class="tag">JWT</span><span class="tag">PostgreSQL</span><span class="tag">Prisma</span><span class="tag">Firebase</span></div>
+<div class="card"><h3>Tools</h3><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Vite</span><span class="tag">Zod</span><span class="tag">React Router</span></div>
+<div class="card"><h3>Fundamentals</h3><span class="tag">OOP</span><span class="tag">Data structures</span><span class="tag">Algorithms</span><span class="tag">Clean code</span></div></div></section>
+<section class="rev"><h2>Experience</h2><div class="card"><h3>Frontend Developer, Freelance (2024)</h3><ul><li>Built React apps from reusable components, integrated with REST APIs.</li><li>Turned Figma designs into responsive, cross-browser interfaces.</li></ul><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Axios</span></div></section>
+<section id="projects" class="rev"><h2>Projects</h2><div class="grid">
+<div class="card"><h3>Government Jobs Portal</h3><ul><li>Three role-based dashboards (Citizen, Agency, Admin) with JWT and httpOnly cookies.</li><li>Profile auto-fill, document storage, Excel export, Prisma and Firestore schema.</li></ul></div>
+<div class="card"><h3>Stash</h3><ul><li>AI bookmark manager with Gemini auto-categorization.</li><li>Arabic and English with RTL and live Firebase sync.</li></ul><a href="https://github.com/engMahmoudSalah/stools">Repository</a></div>
+<div class="card"><h3>Quill</h3><ul><li>Blogging platform: drafts, scheduling, moderated comments, newsletter.</li><li>Canvas particle animation and light and dark modes.</li></ul><a href="https://blogging-platform.mahmodsalah.workers.dev/">Live demo</a></div></div>
+<p><a href="https://md.mahmodsalah.workers.dev/">See every project on the portfolio</a> or <a href="/by-mahmoud">By Mahmoud</a>.</p></section>
+<section id="edu" class="rev"><h2>Education and training</h2><div class="grid">
+<div class="card"><h3>Mansoura University</h3><p>B.Sc. Computer Science, Software Engineering, 2020 to 2024. Very Good. Graduation project: A+.</p></div>
+<div class="card"><h3>Microsoft Machine Learning Engineer</h3><p>Digital Egypt Pioneers Initiative, 2024. ML basics, CNN and RNN, TensorFlow, Keras, Pandas.</p></div>
+<div class="card"><h3>ITI Summer Training</h3><p>Full Stack Web Development, PHP track, 2023.</p></div></div></section>
+</main>
+<canvas class="bg" aria-hidden="true"></canvas>
+<script>
+var h=document.documentElement,s=localStorage.getItem("cvtheme");if(s)h.dataset.theme=s;
+document.getElementById("th").onclick=function(){h.dataset.theme=h.dataset.theme==="dark"?"light":"dark";localStorage.setItem("cvtheme",h.dataset.theme)};
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add("in")})},{threshold:.08});document.querySelectorAll(".rev").forEach(function(e){io.observe(e)});
+</script>
+<script src="/sitedock.js" defer></script>
+</body></html>
