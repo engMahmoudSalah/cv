@@ -26,9 +26,11 @@ ul{padding-left:1.1em;color:var(--mut)}
 .rev{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.rev.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rev{opacity:1;transform:none}}
 canvas.bg{position:fixed;inset:0;z-index:0;pointer-events:none}main,header{position:relative;z-index:2}
+nav a[aria-current=true]{color:var(--fg);border-bottom:2px solid var(--ac2)}
+@media print{:root,[data-theme]{--bg:#fff;--card:#fff;--fg:#111;--mut:#333;--ac:#111;--ac2:#111;--bd:#bbb}body>*:not(main){display:none!important}.rev{opacity:1!important;transform:none!important}.card{break-inside:avoid;box-shadow:none}.row,.hero .btn{display:none}.hero{padding:0 0 10px}.hero h1 span{color:#111;background:none}section{padding:14px 0}a{color:#111}}
 </style></head>
 <body>
-<header><b>MS</b><nav><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#edu">Education</a><button id="th" aria-label="Toggle light and dark theme">Light / Dark</button></nav></header>
+<header><b>MS</b><nav><a href="#skills">Skills</a><a href="#exp">Experience</a><a href="#projects">Projects</a><a href="#edu">Education</a><button id="th" aria-label="Toggle light and dark theme">Light / Dark</button></nav></header>
 <main>
 <div class="hero rev"><div class="tag">Cairo, Egypt</div><h1>Mahmoud Salah<br><span>React Front-End Developer</span></h1>
 <p>Computer Science graduate (Software Engineering, Mansoura University) who blends front-end craft with full-stack fluency in React, TypeScript, Node.js, PostgreSQL and Prisma.</p>
@@ -40,7 +42,7 @@ canvas.bg{position:fixed;inset:0;z-index:0;pointer-events:none}main,header{posit
 <div class="card"><h3>Backend and data</h3><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">REST</span><span class="tag">JWT</span><span class="tag">PostgreSQL</span><span class="tag">Prisma</span><span class="tag">Firebase</span></div>
 <div class="card"><h3>Tools</h3><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Vite</span><span class="tag">Zod</span><span class="tag">React Router</span></div>
 <div class="card"><h3>Fundamentals</h3><span class="tag">OOP</span><span class="tag">Data structures</span><span class="tag">Algorithms</span><span class="tag">Clean code</span></div></div></section>
-<section class="rev"><h2>Experience</h2><div class="card"><h3>Frontend Developer, Freelance (2024)</h3><ul><li>Built React apps from reusable components, integrated with REST APIs.</li><li>Turned Figma designs into responsive, cross-browser interfaces.</li></ul><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Axios</span></div></section>
+<section id="exp" class="rev"><h2>Experience</h2><div class="card"><h3>Frontend Developer, Freelance (2024)</h3><ul><li>Built React apps from reusable components, integrated with REST APIs.</li><li>Turned Figma designs into responsive, cross-browser interfaces.</li></ul><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Axios</span></div></section>
 <section id="projects" class="rev"><h2>Projects</h2><div class="grid">
 <div class="card"><h3>Luxury E-Commerce and Store Management System</h3><p>Full-stack luxury e-commerce platform with an admin dashboard for products, stock, orders and customers. Real-time sync, role-based access, secure sign-in, AI shopping help and offline-first behaviour.</p><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Firebase</span><span class="tag">Tailwind CSS</span><p style="margin-top:14px"><a class="btn p" href="https://e-commerce-store-1919.ai.studio/" target="_blank" rel="noopener">Live demo</a> <a class="btn" href="https://lnkd.in/dZuahb8a" target="_blank" rel="noopener">LinkedIn post</a></p></div>
 <div class="card"><h3>Collaborative Project Management Platform</h3><p>Kanban boards, drag-and-drop tasks, team collaboration, real-time notifications and activity tracking. Google OAuth, role-based access and offline-first sync.</p><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Firebase</span><span class="tag">Firestore</span><span class="tag">Tailwind CSS</span><p style="margin-top:14px"><a class="btn p" href="https://project-manageiment-tool-9014.ai.studio/#landing" target="_blank" rel="noopener">Live demo</a> <a class="btn" href="https://lnkd.in/gTUEW35m" target="_blank" rel="noopener">LinkedIn post</a></p></div>
@@ -60,6 +62,8 @@ canvas.bg{position:fixed;inset:0;z-index:0;pointer-events:none}main,header{posit
 var h=document.documentElement,s=localStorage.getItem("cvtheme");if(s)h.dataset.theme=s;
 document.getElementById("th").onclick=function(){h.dataset.theme=h.dataset.theme==="dark"?"light":"dark";localStorage.setItem("cvtheme",h.dataset.theme)};
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add("in")})},{threshold:.08});document.querySelectorAll(".rev").forEach(function(e){io.observe(e)});
+var links=[].slice.call(document.querySelectorAll("nav a[href^='#']")),secs=links.map(function(a){return document.querySelector(a.getAttribute("href"))});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a,i){if(secs[i]===e.target)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current")})}})},{rootMargin:"-40% 0px -55% 0px"});secs.forEach(function(x){if(x)so.observe(x)});
 </script>
 <script src="/sitedock.js" defer></script>
 </body></html>
