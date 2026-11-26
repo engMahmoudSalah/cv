@@ -27,12 +27,12 @@ ul{padding-left:1.1em;color:var(--mut)}
 .rev{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.rev.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rev{opacity:1;transform:none}}
 canvas.bg{position:fixed;inset:0;z-index:0;pointer-events:none}main,header{position:relative;z-index:2}
-nav a[aria-current=true]{color:var(--fg);border-bottom:2px solid var(--ac2)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ac2);color:#000;padding:8px 14px;border-radius:8px;z-index:99}.skip:focus{left:8px}a:focus-visible,button:focus-visible{outline:2px solid var(--ac2);outline-offset:3px}nav a[aria-current=true]{color:var(--fg);border-bottom:2px solid var(--ac2)}
 @media print{:root,[data-theme]{--bg:#fff;--card:#fff;--fg:#111;--mut:#333;--ac:#111;--ac2:#111;--bd:#bbb}body>*:not(main){display:none!important}.rev{opacity:1!important;transform:none!important}.card{break-inside:avoid;box-shadow:none}.row,.hero .btn{display:none}.hero{padding:0 0 10px}.hero h1 span{color:#111;background:none}section{padding:14px 0}a{color:#111}}
 </style></head>
 <body>
-<header><b>MS</b><nav><a href="#skills">Skills</a><a href="#exp">Experience</a><a href="#projects">Projects</a><a href="#edu">Education</a><button id="th" aria-label="Toggle light and dark theme">Light / Dark</button></nav></header>
-<main>
+<a class="skip" href="#main">Skip to content</a><header><b>MS</b><nav><a href="#skills">Skills</a><a href="#exp">Experience</a><a href="#projects">Projects</a><a href="#edu">Education</a><button id="th" aria-label="Toggle light and dark theme">Light / Dark</button></nav></header>
+<main id="main" tabindex="-1">
 <div class="hero rev"><div class="tag">Cairo, Egypt</div><h1>Mahmoud Salah<br><span>React Front-End Developer</span></h1>
 <p>Computer Science graduate (Software Engineering, Mansoura University) who blends front-end craft with full-stack fluency in React, TypeScript, Node.js, PostgreSQL and Prisma.</p>
 <div class="row"><a class="btn p" href="Mahmoud_Salah_Resume.pdf" download>Download PDF resume</a><a class="btn" href="https://md.mahmodsalah.workers.dev/">Portfolio</a><a class="btn" href="https://github.com/engMahmoudSalah">GitHub</a><a class="btn" href="https://www.linkedin.com/in/mahmod-salah">LinkedIn</a></div></div>
