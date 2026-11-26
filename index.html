@@ -11,7 +11,7 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,"Segoe UI",Roboto,sans-serif}
 header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:12px 5vw;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd)}
-header b{letter-spacing:.04em}nav{display:flex;gap:14px;align-items:center}@media(max-width:560px){nav a{display:none}}nav a{color:var(--mut);text-decoration:none}nav a:hover{color:var(--fg)}
+header b{letter-spacing:.04em}nav{display:flex;gap:14px;align-items:center}@media(max-width:560px){header{flex-wrap:wrap;gap:8px}nav{width:100%;flex-wrap:wrap;gap:6px 14px;font-size:14px}nav button{margin-inline-start:auto;padding:4px 10px;font-size:0;border-radius:9px}nav button::after{content:"\25D0";font-size:16px}nav{gap:6px 12px}}nav a{color:var(--mut);text-decoration:none}nav a:hover{color:var(--fg)}
 button,.btn{font:inherit;cursor:pointer;border:1px solid var(--bd);background:var(--card);color:var(--fg);padding:8px 14px;border-radius:10px;text-decoration:none;display:inline-block}
 .btn.p{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#06101f;border:0;font-weight:700}
 :focus-visible{outline:3px solid var(--ac2);outline-offset:2px}
